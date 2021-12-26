@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/yashtekwani/Desktop/Tinder SQL.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="192"/><column_width id="3" width="1566"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,6:mainUserID"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="MatchID" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="45"/><column index="2" value="47"/><column index="3" value="74"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="UserID" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="6" mode="1"/></sort><column_widths><column index="1" value="68"/><column index="2" value="65"/><column index="3" value="72"/><column index="4" value="46"/><column index="5" value="75"/><column index="6" value="109"/><column index="7" value="109"/><column index="8" value="53"/><column index="9" value="66"/><column index="10" value="61"/><column index="11" value="66"/><column index="12" value="72"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="UserID1" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="56"/><column index="2" value="68"/><column index="3" value="65"/><column index="4" value="28"/><column index="5" value="46"/><column index="6" value="54"/><column index="7" value="25"/><column index="8" value="109"/><column index="9" value="53"/><column index="10" value="66"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="Create Table for User Registration">CREATE TABLE UserID (
+	UniqueID char, 
+	First_Name      CHAR NOT NULL,
+	Last_Name  CHAR NOT NULL,
+	Age  INTEGER,
+	Gender CHAR NOT NULL,
+	InterestedInGender Char not null,
+	Interests CHAR NOT NULL,
+	Bio CHAR NOT NULL,
+	Maximum_Distance INTEGER,
+	Location CHAR NOT NULL,
+	MinAgeLimit INTEGER, 
+	MaxAgeLimit INTEGER);
+	
+	
+	CREATE TABLE MatchID (
+	FromID  Char not null,
+	ToID   char not null,
+	Timestamp  INTEGER);</sql><sql name="User Registering their Profile">INSERT INTO UserID VALUES 
+(&quot;1&quot;,&quot;John&quot;, &quot;Cummins&quot;, &quot;21&quot;, &quot;Male&quot;, &quot;Female&quot;,&quot;Sports, Photography&quot;,&quot;Outgoing and adventourous&quot;, &quot;5 miles&quot;, &quot;Boston&quot;, &quot;18&quot;,&quot;22&quot;);
+
+INSERT INTO UserID VALUES 
+(&quot;2&quot;,&quot;Manny&quot;, &quot;Bravo&quot;, &quot;18&quot;, &quot;Male&quot;, &quot;Female&quot;,&quot;Outdoors, Hiking&quot;,&quot;I enjoy the outdoors&quot;, &quot;2 miles&quot;, &quot;Boston&quot;, &quot;18&quot;,&quot;19&quot;);
+
+INSERT INTO UserID VALUES 
+(&quot;3&quot;,&quot;Eric&quot;, &quot;James&quot;, &quot;25&quot;, &quot;Male&quot;, &quot;Female&quot;,&quot;Flying Planes&quot;,&quot;Certified Aircraft Pilot&quot;, &quot;15 miles&quot;, &quot;Boston&quot;, &quot;20&quot;,&quot;26&quot;);
+
+INSERT INTO UserID VALUES 
+(&quot;4&quot;,&quot;Marnus&quot;, &quot;Smith&quot;, &quot;31&quot;, &quot;Male&quot;, &quot;Female&quot;,&quot;Yoga, Drinks, Food&quot;,&quot;Laid back and enjoying life&quot;, &quot;25 miles&quot;, &quot;Boston&quot;, &quot;18&quot;,&quot;22&quot;);
+
+INSERT INTO UserID VALUES 
+(&quot;5&quot;,&quot;Olivia&quot;, &quot;Hutton&quot;, &quot;19&quot;, &quot;Female&quot;,&quot;Male&quot;,&quot;Dance, Ballet and Hip-Hop&quot;,&quot;Energizer Bunny&quot;, &quot;3 miles&quot;, &quot;Boston&quot;, &quot;20&quot;,&quot;25&quot;);
+
+INSERT INTO UserID VALUES 
+(&quot;6&quot;,&quot;May&quot;, &quot;Davis&quot;, &quot;35&quot;, &quot;Female&quot;, &quot;Male&quot;,&quot;Cooking, Baking&quot;,&quot;I love spending quality time in the kitchen&quot;, &quot;25 miles&quot;, &quot;Boston&quot;, &quot;35&quot;,&quot;40&quot;);
+
+INSERT INTO UserID VALUES 
+(&quot;7&quot;,&quot;Sophia&quot;, &quot;Finley&quot;, &quot;23&quot;, &quot;Female&quot;,&quot;Male&quot;,&quot;Outdoors, Hiking and Barbecue&quot;,&quot;I  have my own caravan&quot;, &quot;15 miles&quot;, &quot;Boston&quot;, &quot;23&quot;,&quot;29&quot;);
+
+INSERT INTO UserID VALUES 
+(&quot;8&quot;,&quot;Isabella&quot;, &quot;Duncan&quot;, &quot;27&quot;, &quot;Female&quot;, &quot;Male&quot;,&quot;Crypto, Stockmarket&quot;,&quot;I spend all day looking at the market&quot;, &quot;20 miles&quot;, &quot;Boston&quot;, &quot;25&quot;,&quot;32&quot;);
+
+INSERT INTO UserID VALUES 
+(&quot;9&quot;,&quot;Jackie&quot;, &quot;Poirier&quot;, &quot;21&quot;, &quot;Female&quot;, &quot;Male&quot;,&quot;Reading and Aviation&quot;,&quot;I love me a good book&quot;, &quot;10 miles&quot;, &quot;Boston&quot;, &quot;21&quot;,&quot;28&quot;);
+
+INSERT INTO UserID VALUES 
+(&quot;10&quot;,&quot;Liam&quot;, &quot;Oliver&quot;, &quot;40&quot;, &quot;Male&quot;, &quot;Female&quot;,&quot;Cars, Food and  Cooking&quot;,&quot;Cars and Food describes my life&quot;, &quot;40 miles&quot;, &quot;Boston&quot;, &quot;34&quot;,&quot;40&quot;);
+
+INSERT INTO UserID VALUES 
+(&quot;11&quot;,&quot;Benjamin&quot;, &quot;Jones&quot;, &quot;28&quot;, &quot;Male&quot;, &quot;Female&quot;,&quot;Finance, Working Out&quot;,&quot;Find me working out or doing finance&quot;, &quot;20 miles&quot;, &quot;Boston&quot;, &quot;24&quot;,&quot;28&quot;);
+
+INSERT INTO UserID VALUES 
+(&quot;12&quot;,&quot;Serena&quot;, &quot;Johnson&quot;, &quot;17&quot;, &quot;Female&quot;, &quot;Male&quot;,&quot;Dancer, Cheerleading&quot;,&quot;I'm always dancing&quot;, &quot;3 miles&quot;, &quot;Boston&quot;, &quot;18&quot;,&quot;22&quot;);</sql><sql name="Filtering User by Preference">SELECT U1.* FROM UserID AS U1, UserID AS U2 
+WHERE U2.First_Name = &quot;John&quot;
+AND U2.InterestedInGender = U1.Gender 
+AND U1.Age &lt; U2.MaxAgeLimit;
+</sql><sql name="Forming a Match">INSERT into MatchID VALUES
+(&quot;John&quot;, &quot;Olivia&quot;, &quot;10th January&quot;);
+
+SELECT  * FROM MatchID WHERE FromID is &quot;Olivia&quot; AND ToID is &quot;John&quot;;
+
+INSERT into MatchID VALUES
+(&quot;John&quot;, &quot;Serene&quot;, &quot;11th January&quot;);
+
+SELECT * FROM MatchID WHERE FromID is &quot;Serena&quot; AND ToID is &quot;John&quot;;
+
+INSERT into MatchID VALUES
+(&quot;John&quot;, &quot;Sophia&quot;, &quot;12th January&quot;);
+
+SELECT * FROM MatchID WHERE FromID is &quot;Sophia&quot; AND ToID is &quot;John&quot;;
+
+INSERT into MatchID VALUES
+(&quot;Olivia&quot;, &quot;Marnus&quot;, &quot;13th January&quot;);
+
+SELECT * FROM MatchID WHERE FromID is &quot;Marnus&quot; AND ToID is &quot;Olivia&quot;;
+
+INSERT into MatchID VALUES
+(&quot;Olivia&quot;, &quot;John&quot;, &quot;15th January&quot;);
+
+SELECT * FROM MatchID WHERE FromID is &quot;John&quot; AND ToID is &quot;Olivia&quot;;
+
+
+</sql><sql name="SQL 7"></sql><current_tab id="3"/></tab_sql></sqlb_project>
